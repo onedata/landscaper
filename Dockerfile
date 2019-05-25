@@ -5,8 +5,8 @@ RUN echo '@edge https://nl.alpinelinux.org/alpine/edge/main' >> /etc/apk/reposit
     apk upgrade --update && \
     apk add bash curl ca-certificates
 
-ENV HELM_VERSION="v2.8.0"
-ENV K8S_VERSION="v1.9.2"
+ENV HELM_VERSION="v2.13.1"
+ENV K8S_VERSION="v1.14.2"
 
 RUN curl -s https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar -xz -C /tmp && mv /tmp/linux-amd64/helm /usr/bin
 
