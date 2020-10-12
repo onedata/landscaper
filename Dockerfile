@@ -12,7 +12,7 @@ RUN curl -s https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar -x
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/${K8S_VERSION}/bin/linux/amd64/kubectl && chmod +x kubectl && mv kubectl /usr/bin
 
-RUN helm init --client-only && \
+RUN helm && \
     mkdir -v -p /root/.kube
 
 CMD bash
